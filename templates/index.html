@@ -1,0 +1,28 @@
+
+<html>
+
+<body>
+ <div class ='login'>
+    <h1> Wine Quality Prediction</h1>
+
+    <form method="post" action="{{url_for('predict')}}">
+        <input type="float" name='fixed acidity' placeholder='fixed acidity' required="required">
+        <input type="float" name="volatile acidity" placeholder="volatile acidity" required="required">
+        <input type="float" name="citric acid" placeholder="citric acid" required="required">
+        <input type="float" name="residual sugar" placeholder="residual sugar" required="required">
+        <input type="float" name="chlorides" placeholder="chlorides" required="required">
+        <input type="float" name="free sulfur dioxide" placeholder="free sulfur dioxide" required="required">
+        <input type="float" name="total sulfur dioxide" placeholder="total sulfur dioxide" required="required">
+        <input type="float" name="density" placeholder="density" required="required">
+        <input type="float" name="pH" placeholder="pH" required="required">
+        <input type="float" name="sulphates" placeholder="sulphates" required="required">
+        <input type="float" name="alcohol" placeholder="alcohol" required="required">
+        <button type='submit' class ='btn btn-primary btn-block btn-large'>Predict</button>
+    </form>
+    <br>
+    <br>
+    {{prediction_text}}
+ </div>    
+
+</body>
+</html>
